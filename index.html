@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>E-mail signature Maastricht Institute of Arts - Zuyd</title>
+    
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/detect-browser.js"></script>
+    <script>var info = getBrowser();</script>
+</head>
+
+<body>
+
+    <ul>
+        <li><a href="index.html">homepage</a></li>
+        <li><a href="mailsignature.html">mailsignature</a></li>
+    </ul>
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1>E-mailhandtekening</h1>
+                <div class="card card-body">
+
+                    <p>Gebruik <strong style="color: darkred;">Google Chrome</strong> om de handtekening te genereren!!
+                    </p>
+                    <p>Vul de velden in en genereer je handtekening. Wanneer je handtekening in een nieuw tabje of
+                        venster verschijnt, selecteer je de gehele handtekening en kopieer je deze naar het clipboard
+                        (CMD+A, CMD+C) en plak je dit vervolgens in een nieuwe mailsignature.</p>
+                    <p>Let op: gebruik je Mac Mail? Zet dan het volgende vinkje uit vóórdat je je signature plakt (klik
+                        op de afbeelding voor een vergroting).</p><a href="instelling-mac-mail.png"><img
+                            src="instelling-mac-mail.png" width="100"></a>
+                </div>
+            </div>
+        </div>
+
+
+        <form onsubmit="return validate();">
+            <div class="form-group row">
+                <label class="col-md-2 col-form-label" for="slotformule">Slotformule:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="slotformule" name="slotformule" required="true">
+                        <option>Met vriendelijke groet</option>
+                        <option>Kind regards</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-2 col-form-label" for="naam">Naam: *</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="naam" name="naam"
+                        placeholder="Bijvoorbeeld: Vincent Sijben" title="Bijvoorbeeld: Vincent Sijben" rel="txtTooltip"
+                        data-toggle="tooltip" data-placement="top" required="true">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-2 col-form-label" for="functie">Functie: *</label>
+                <div class="col-sm-10">
+                    <input pattern="[a-z ,&À-ž|]{1,}" type="text" class="form-control" id="functie" name="functie"
+                        placeholder="Bijvoorbeeld: lecturer creative technology (kleine letters)"
+                        title="Functie mag alleen kleine letters, spaties, komma's, pipelines en speciale karakters zoals éöâ bevatten. Bv lecturer creative technology & design"
+                        rel="txtTooltip" data-toggle="tooltip" data-placement="top" required="true">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-2 col-form-label" for="email">E-mailadres: *</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" name="email"
+                        placeholder="Bijvoorbeeld: vincent.sijben@zuyd.nl" title="Bijvoorbeeld: vincent.sijben@zuyd.nl"
+                        rel="txtTooltip" data-toggle="tooltip" data-placement="top" required="true">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-2 col-form-label" for="departmentrow1">Afdeling (regel 1): *</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="departmentrow1" name="departmentrow1"
+                        value="Communication and Multimedia Design" placeholder="Communication and Multimedia Design"
+                        title="Communication and Multimedia Design" rel="txtTooltip" data-toggle="tooltip"
+                        data-placement="top" required="true">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-2 col-form-label" for="departmentrow2">Afdeling (regel 2): </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="departmentrow2" name="departmentrow2"
+                        placeholder="Design | Visual Communication" title="Design | Visual Communication"
+                        rel="txtTooltip" data-toggle="tooltip" data-placement="top">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-2 col-form-label" for="mobnr">Telefoonnr 1: *</label>
+                <div class="col-sm-10">
+                    <input maxlength="13" pattern=".{10,}" class="form-control" id="telefoon1" name="telefoon1"
+                        placeholder="Bijvoorbeeld: 0433466500" value="0433466500"
+                        title="Bijvoorbeeld: 0604342432 of 0431234567.<br />Enkel 10 cijfers invoeren, het nummer wordt in het juiste format gegenereerd"
+                        rel="txtTooltip" data-toggle="tooltip" data-placement="top" required="true">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-2 col-form-label" for="mobnr">Telefoonnr 2:</label>
+                <div class="col-sm-10">
+                    <input maxlength="13" pattern=".{10,}" class="form-control" id="telefoon2" name="telefoon2"
+                        placeholder="Bijvoorbeeld: 0604342432"
+                        title="Bijvoorbeeld: 0604342432 of 0431234567.<br />Enkel 10 cijfers invoeren, het nummer wordt in het juiste format gegenereerd"
+                        rel="txtTooltip" data-toggle="tooltip" data-placement="top">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-2 col-form-label" for="locatie1">Adres: *</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="locatie1" name="locatie1"
+                        placeholder="Bijvoorbeeld: Brusselseweg 150, 6217 HB Maastricht, P.O. Box 634, 6200 AP Maastricht"
+                        required="true" value="Brusselseweg 150, 6217 HB Maastricht, P.O. Box 634, 6200 AP Maastricht">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="offset-md-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">genereer handtekening</button>
+                </div>
+            </div>
+
+        </form>
+
+
+        <div class="offset-md-2 col-sm-10">
+
+            <button onclick="fill();" class="btn btn-outline-primary">debug: alles tijdelijk invullen</button>
+
+        </div>
+
+
+        <footer>
+            <p>&copy; Vincent Sijben v2022.05.26</p>
+        </footer>
+
+    </div> <!-- /container -->
+
+</body>
+
+</html>
