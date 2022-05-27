@@ -43,3 +43,12 @@ if (telefoon2.substr(0, 4) == "0032") {
 
 }
 document.querySelector("#telefoon2").replaceWith(telefoon2);
+
+const copyRichText = async () => {
+    const content = document.querySelector("table").outerHTML;
+    const blob = new Blob([content], { type: "text/html" });
+    const richTextInput = new ClipboardItem({ "text/html": blob });
+    await navigator.clipboard.write([richTextInput]);
+    let success = document.createTextNode("kopiëren gelukt!");
+    document.querySelector("#copy").appendChild(success);
+};
