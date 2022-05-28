@@ -4,29 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>E-mail signature Maastricht Institute of Arts - Zuyd</title>
-
-    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="css/main.css">
-
-    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/vendor/popper.min.js"></script>
-    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
-    <script src="js/plugins.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/detect-browser.js"></script>
-    <script>var info = getBrowser();</script>
 </head>
 
-<body>
-
-    <ul>
-        <li><a href="index.html">homepage</a></li>
-        <li><a href="mailsignature.html">mailsignature</a></li>
-    </ul>
+<body id="homepage">
 
     <div class="container">
         <div class="jumbotron">
@@ -34,15 +19,22 @@
                 <h1>E-mailhandtekening</h1>
                 <div class="card card-body">
 
-                    <p>Gebruik <strong style="color: darkred;">Google Chrome</strong> om de handtekening te genereren!!
-                    </p>
-                    <p>Vul de velden in en genereer je handtekening. Kopieer de handtekening door op de kopieer knop te klikken. 
+                    <div class="alert alert-danger" role="alert" style="display: none;">
+                        This browser is not supported. Please try Google Chrome or Safari
+                    </div>
+                    <div class="alert alert-success" role="alert">
+                    <p>Vul de velden in en genereer je handtekening. Kopieer de handtekening door op de kopieer knop te
+                        klikken.
                         Plak vervolgens je klembord in een nieuwe mailsignature.</p>
                     <p>Let op: gebruik je Mac Mail? Zet dan het volgende vinkje uit vóórdat je je signature plakt (klik
                         op de afbeelding voor een vergroting).</p><a href="instelling-mac-mail.png"><img
                             src="instelling-mac-mail.png" width="100"></a>
+                        </div>
                 </div>
+
             </div>
+
+
         </div>
 
 
@@ -129,20 +121,15 @@
                     <button type="submit" class="btn btn-primary">genereer handtekening</button>
                 </div>
             </div>
+            <div class="form-group row">
+                <div class="offset-md-2 col-sm-10">
+
+                    <button onclick="fill();" class="btn btn-outline-primary">debug: alles tijdelijk invullen</button>
+
+                </div>
+            </div>
 
         </form>
-
-
-        <div class="offset-md-2 col-sm-10">
-
-            <button onclick="fill();" class="btn btn-outline-primary">debug: alles tijdelijk invullen</button>
-
-        </div>
-
-
-        <footer>
-            <p>&copy; Vincent Sijben v2022.05.26</p>
-        </footer>
 
     </div> <!-- /container -->
 
